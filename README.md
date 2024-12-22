@@ -1,5 +1,5 @@
 # myProject
-This is test repo
-this repo created by prof
+this is myRepo OOP Java Project
+Share it if you want
 
-<h1>Hello</h1>
+<h1>PROF IS HERE</h1>
