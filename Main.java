@@ -28,7 +28,7 @@ public class Main {
             for (Drawable drawable : drawables) // for each 
             {
                 if (drawable != null) {
-                    if (drawable instanceof Shape);
+                    if (drawable == Shape);
                     }
                 }
             }
