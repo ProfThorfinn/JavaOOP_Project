@@ -71,10 +71,6 @@ class Circle extends Shape {
                 "', area=" + getArea() + ", perimeter=" + getPerimeter() +
                 ", dateCreated=" + getDateCreated() + "}";
     }
-
-    public String howToDraw() {
-        return "Draw a circle with radius " + radius;
-    }
 }
 
 abstract class ThreeDShape extends Shape {
@@ -123,12 +119,6 @@ class Cube extends ThreeDShape {
     public void setSide(double side) {
         this.side = side;
     }
-
-    @Override
-    public String howToDraw() {
-        return "Draw a cube with side length " + side;
-    }
-
     @Override
     public String toString() {
         return "Cube {side=" + side + ", color='" + getColor() +
