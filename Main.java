@@ -27,16 +27,14 @@ public class Main {
                 }
             }
             double totalArea = 0;
-            // System.out.println("Shapes List:");
-            for (Drawable drawable : drawables) {
+            for (Drawable drawable : drawables) // for each 
+            {
                 if (drawable != null) {
                     if (drawable instanceof Shape) {
                         totalArea += ((Shape) drawable).getArea();
-//                      System.out.println(drawable.toString());
                     }
                 }
             }
-
             System.out.println("\nTotal Area of Drawable Array: " + totalArea);
     }
 }
