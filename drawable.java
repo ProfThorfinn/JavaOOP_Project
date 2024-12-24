@@ -1,4 +1,3 @@
-package mycompany.oop_drmaged3skr;
 import java.util.Date;
 
 interface Drawable {
@@ -11,7 +10,7 @@ abstract class Shape implements Drawable {
 
     public Shape() {
         this.dateCreated = new Date();
-        this.color = "white";
+        this.color = "null";
     }
 
     public Shape(String color) {
@@ -68,7 +67,9 @@ class Circle extends Shape {
 
     @Override
     public String toString() {
-        return "Circle [radius=" + radius + ", color=" + getColor() + "]";
+        return "Circle {side=" + radius + ", color='" + getColor() +
+                "', area=" + getArea() + ", perimeter=" + getPerimeter() +
+                ", dateCreated=" + getDateCreated() + "}";
     }
 
     public String howToDraw() {
@@ -122,7 +123,16 @@ class Cube extends ThreeDShape {
     public void setSide(double side) {
         this.side = side;
     }
+
+    @Override
     public String howToDraw() {
         return "Draw a cube with side length " + side;
+    }
+
+    @Override
+    public String toString() {
+        return "Cube {side=" + side + ", color='" + getColor() +
+                "', area=" + getArea() + ", perimeter=" + getPerimeter() +
+                ", volume=" + getVolume() + ", dateCreated=" + getDateCreated() + "}";
     }
 }
