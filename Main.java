@@ -1,12 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        if (args.length < 3 || (args.length - 1) % 2 != 0) {
-            System.out.println("Ex: DrawableTest 2 circle 22.5 cube 23.6");
-            return;
-        }
             int arraySize = Integer.parseInt(args[0]);
             if (arraySize < 2) {
-                System.out.println("Array size must be at least 2.");
+                System.out.println("size must be at least 2.");
                 return;
             }
             Drawable[] drawables = new Drawable[arraySize];
@@ -14,11 +10,13 @@ public class Main {
 
             for (int i = 1; i < args.length; i += 2) {
                 if (index >= arraySize) {
-                    System.out.println("Extra shapes ignored.");
+                    System.out.println("Extra shapes ignored." + " Only 2 Shapes");
                     break;
                 }
                 String type = args[i];
                 double size = Double.parseDouble(args[i + 1]);
+                // علشان تاخد ال size + type
+                // لو كانت i بس كنا هناخد ال type بس
 
                 if (type.equalsIgnoreCase("circle")) {
                     drawables[index++] = new Circle(size);
