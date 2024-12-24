@@ -8,7 +8,7 @@ public class Main {
             Drawable[] drawables = new Drawable[arraySize];
             int index = 0;
 
-            for (int i = 1; i < args.length; i += 2) {
+            for (int i = 1; i < args.length; i++) {
                 if (index >= arraySize) {
                     System.out.println("Extra shapes ignored." + " Only 2 Shapes");
                     break;
