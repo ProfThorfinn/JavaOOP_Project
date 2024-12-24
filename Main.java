@@ -14,14 +14,12 @@ public class Main {
                     break;
                 }
                 String type = args[i];
-                double size = Double.parseDouble(args[i + 1]);
-                // علشان تاخد ال size + type
-                // لو كانت i بس كنا هناخد ال type بس
+                double size = Double.parseDouble(args[i]);
 
                 if (type.equalsIgnoreCase("circle")) {
-                    drawables[index++] = new Circle(size);
+                    drawables[index] = new Circle(size);
                 } else if (type.equalsIgnoreCase("cube")) {
-                    drawables[index++] = new Cube(size);
+                    drawables[index] = new Cube(size);
                 } else {
                     System.out.println("Invalid shape type: " + type + ". Use 'circle' or 'cube'.");
                 }
@@ -30,8 +28,7 @@ public class Main {
             for (Drawable drawable : drawables) // for each 
             {
                 if (drawable != null) {
-                    if (drawable instanceof Shape) {
-                        totalArea += ((Shape) drawable).getArea();
+                    if (drawable instanceof Shape);
                     }
                 }
             }
